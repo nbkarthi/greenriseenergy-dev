@@ -607,8 +607,8 @@ p {
 }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent) 100%);
   border-radius: var(--radius-lg);
   display: flex;
@@ -618,8 +618,8 @@ p {
 }
 
 .service-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
   color: var(--color-white);
 }
 
