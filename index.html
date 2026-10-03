@@ -773,8 +773,8 @@
                   <input type="text" id="name" name="name" placeholder="John Doe" required aria-required="true">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" placeholder="john@example.com" required aria-required="true">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com">
                 </div>
               </div>
 
@@ -789,23 +789,29 @@
                 </div>
               </div>
 
-              <div class="form-group">
-                <label for="project-type">Project Type</label>
-                <select id="project-type" name="project-type">
-                  <option value="">Select a project type</option>
-                  <option value="Residential Rooftop">Residential Rooftop</option>
-                  <option value="MSME & Industrial Rooftop">MSME & Industrial Rooftop</option>
-                  <option value="Battery Storage (BESS)">Battery Storage (BESS)</option>
-                  <option value="CSR-Funded Install">CSR-Funded Install</option>
-                  <option value="Utility-Scale & PPA">Utility-Scale & PPA</option>
-                  <option value="PPA Facilitation">PPA Facilitation</option>
-                  <option value="Retail Distribution">Retail Distribution</option>
-                </select>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="project-type">Project Type</label>
+                  <select id="project-type" name="project-type">
+                    <option value="">Select a project type</option>
+                    <option value="Residential Rooftop">Residential Rooftop</option>
+                    <option value="MSME & Industrial Rooftop">MSME & Industrial Rooftop</option>
+                    <option value="Battery Storage (BESS)">Battery Storage (BESS)</option>
+                    <option value="CSR-Funded Install">CSR-Funded Install</option>
+                    <option value="Utility-Scale & PPA">Utility-Scale & PPA</option>
+                    <option value="PPA Facilitation">PPA Facilitation</option>
+                    <option value="Retail Distribution">Retail Distribution</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="monthly-bill">Average Monthly Electricity Bill (₹)</label>
+                  <input type="number" id="monthly-bill" name="monthly-bill" placeholder="e.g. 3000" min="0" step="1" inputmode="numeric">
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" placeholder="Tell us about your project, property size, current electricity bills, or any questions..." required aria-required="true"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project, property size, current electricity bills, or any questions..."></textarea>
               </div>
 
               <div class="cf-turnstile" data-sitekey="0x4AAAAAADrXsJDarvzyJpvB" data-appearance="interaction-only"></div>

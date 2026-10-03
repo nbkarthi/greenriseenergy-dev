@@ -154,12 +154,12 @@
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
 
-      if (!data.name || !data.email || !data.phone || !data.city || !data.message) {
+      if (!data.name || !data.phone || !data.city) {
         showNotification('Please fill in all required fields.', 'error');
         return;
       }
 
-      if (!isValidEmail(data.email)) {
+      if (data.email && !isValidEmail(data.email)) {
         showNotification('Please enter a valid email address.', 'error');
         return;
       }
@@ -173,10 +173,10 @@
       const payload = {
         name: data.name,
         phone_no: data.phone,
-        bill_amount: null,
+        bill_amount: parseInt(data['monthly-bill'], 10) || null,
         city: data.city,
-        email: data.email,
-        message: data.message,
+        email: data.email || null,
+        message: data.message || null,
         project_type: data['project-type'] || null,
         source: 'website_contact',
         utm_source: utm.get('utm_source') || null,
