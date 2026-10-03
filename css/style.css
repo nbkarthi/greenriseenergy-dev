@@ -855,6 +855,42 @@ p {
   margin: 0 auto;
 }
 
+.about-photo,
+.card-photo,
+.photo-strip img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.about-photo {
+  aspect-ratio: 16 / 7;
+  margin-bottom: var(--spacing-xl);
+}
+
+.card-photo {
+  aspect-ratio: 16 / 10;
+  margin-bottom: var(--spacing-lg);
+}
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.photo-strip img {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 768px) {
+  .photo-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
 .about-content h2 {
   margin-bottom: var(--spacing-lg);
 }
