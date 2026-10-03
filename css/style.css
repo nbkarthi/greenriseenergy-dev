@@ -988,6 +988,10 @@ p {
   gap: var(--spacing-lg);
 }
 
+.contact-form[hidden] {
+  display: none;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
