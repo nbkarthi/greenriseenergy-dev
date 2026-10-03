@@ -856,21 +856,31 @@ p {
   margin: 0 auto;
 }
 
-.capabilities {
+.capabilities,
+.about,
+.contact {
   position: relative;
   overflow: hidden;
 }
 
-.capabilities::before {
+.capabilities::before,
+.about::before,
+.contact::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../photos/msme2.jpeg") center / cover no-repeat;
+  background: center / cover no-repeat;
   opacity: 0.07;
   pointer-events: none;
 }
 
-.capabilities > .container {
+.capabilities::before { background-image: url("../photos/msme2.jpeg"); }
+.about::before { background-image: url("../photos/msme3.jpeg"); }
+.contact::before { background-image: url("../photos/residential.jpeg"); }
+
+.capabilities > .container,
+.about > .container,
+.contact > .container {
   position: relative;
 }
 
