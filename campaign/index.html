@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Solar Campaign | Greenrise Energy</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            background: linear-gradient(135deg, #0f2015 0%, #1a3a22 50%, #2e7d32 100%);
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+            color: #ffffff;
+            padding: 20px;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            width: 100%;
+            max-width: 550px;
+            padding: 48px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            transform: translateY(0);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+        .container:hover {
+            transform: translateY(-8px);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 36px;
+            position: relative;
+            z-index: 1;
+        }
+        .brand-logo {
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(46, 125, 50, 0.2);
+            border: 1px solid rgba(46, 125, 50, 0.4);
+            color: #a5d6a7;
+        }
+        .brand-logo svg {
+            width: 32px;
+            height: 32px;
+        }
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #F9A825, #FFD54F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        .form-group {
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.85);
+            letter-spacing: 0.3px;
+        }
+        input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        input:focus {
+            outline: none;
+            background: rgba(0, 0, 0, 0.25);
+            border-color: #F9A825;
+            box-shadow: 0 0 0 4px rgba(249, 168, 37, 0.15);
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            margin-top: 16px;
+            background: linear-gradient(135deg, #F9A825 0%, #F57F17 100%);
+            color: #3e2723;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(249, 168, 37, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(249, 168, 37, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(1px);
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: scaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(249, 168, 37, 0.1);
+            color: #F9A825;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .success-message h3 {
+            color: #F9A825;
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .success-message p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        @keyframes scaleUp {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 28px 24px; }
+            .header h1 { font-size: 1.6rem; }
+            .header p { font-size: 0.85rem; white-space: nowrap; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="formContainer">
+            <div class="header">
+                <h1>Go Solar Today</h1>
+                <p>Register for our exclusive campaign.</p>
+            </div>
+            <form id="campaignForm" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Rajesh Kumar" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="98765 43210" required pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric" title="Enter a 10-digit mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="town">Town / City</label>
+                    <input type="text" id="town" name="town" placeholder="Chennai" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthly_bill">Average Monthly Electricity Bill (₹)</label>
+                    <input type="number" id="monthly_bill" name="monthly_bill" placeholder="e.g. 3000" min="0" step="1" inputmode="numeric" pattern="[0-9]*">
+                </div>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAADrXsJDarvzyJpvB" data-appearance="interaction-only"></div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>Unlock Your Savings</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            </form>
+        </div>
+        
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your details have been successfully captured. Our energy experts will contact you shortly to guide you on your solar journey.</p>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://app.greenriseenergy.com/api/leads';
+
+        function getVisitorId() {
+            let id = localStorage.getItem('gr_visitor_id');
+            if (!id) { id = crypto.randomUUID(); localStorage.setItem('gr_visitor_id', id); }
+            return id;
+        }
+
+        function resetBtn(btn) {
+            btn.style.opacity = '1';
+            btn.style.cursor = 'pointer';
+            btn.querySelector('span').textContent = 'Unlock Your Savings';
+        }
+
+        document.getElementById('campaignForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.style.opacity = '0.8';
+            btn.style.cursor = 'not-allowed';
+            btn.querySelector('span').textContent = 'Processing...';
+
+            const turnstileToken = document.querySelector('[name="cf-turnstile-response"]')?.value || '';
+            const utm = new URLSearchParams(location.search);
+
+            const payload = {
+                name: document.getElementById('name').value,
+                phone_no: document.getElementById('phone').value,
+                bill_amount: parseInt(document.getElementById('monthly_bill').value, 10) || null,
+                city: document.getElementById('town').value,
+                source: 'campaign',
+                utm_source: utm.get('utm_source') || null,
+                utm_medium: utm.get('utm_medium') || null,
+                utm_campaign: utm.get('utm_campaign') || null,
+                visitor_id: getVisitorId(),
+                'cf-turnstile-response': turnstileToken,
+            };
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                if (response.ok) {
+                    document.getElementById('formContainer').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                } else if (response.status === 403) {
+                    alert('Human verification failed. Please complete the CAPTCHA and try again.');
+                    if (window.turnstile) window.turnstile.reset();
+                    resetBtn(btn);
+                } else {
+                    let errorMessage = 'Oops! There was a problem submitting your form.';
+                    try {
+                        const errorData = await response.json();
+                        if (errorData && errorData.detail) {
+                            if (typeof errorData.detail === 'string') {
+                                errorMessage = errorData.detail;
+                            } else if (Array.isArray(errorData.detail)) {
+                                errorMessage = errorData.detail.map(err => {
+                                    const field = err.loc && err.loc.length > 0 ? err.loc[err.loc.length - 1] : 'Error';
+                                    return `${field}: ${err.msg}`;
+                                }).join('\n');
+                            }
+                        }
+                    } catch (e) {
+                        // Ignore JSON parse errors and use default message
+                    }
+                    alert(errorMessage);
+                    resetBtn(btn);
+                }
+            } catch (error) {
+                alert('Oops! There was a network error. Please try again.');
+                resetBtn(btn);
+            }
+        });
+    </script>
+</body>
+</html>
