@@ -17,7 +17,15 @@
     .shop { padding: calc(var(--header-height) + var(--spacing-3xl)) var(--spacing-lg) var(--spacing-4xl); max-width: 1200px; margin: 0 auto; }
     .shop h1 { font-size: var(--font-size-2xl); color: var(--color-gray-900); margin-bottom: var(--spacing-sm); }
     .shop-intro { color: var(--color-gray-700); max-width: 640px; margin-bottom: var(--spacing-xl); }
-    .shop-nav { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); margin-bottom: var(--spacing-2xl); }
+    .shop-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--spacing-2xl); align-items: start; }
+    .shop-nav { position: sticky; top: calc(var(--header-height) + var(--spacing-lg)); display: flex; flex-direction: column; gap: var(--spacing-xs); }
+    .shop-nav a { padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-lg); font-weight: 600; color: var(--color-gray-700); }
+    .shop-nav a:hover { background-color: var(--color-primary); color: var(--color-white); }
+    .shop h2 { scroll-margin-top: calc(var(--header-height) + var(--spacing-lg)); }
+    @media (max-width: 800px) {
+      .shop-layout { grid-template-columns: 1fr; gap: 0; }
+      .shop-nav { position: static; flex-direction: row; flex-wrap: wrap; margin-bottom: var(--spacing-lg); }
+    }
     .shop h2 { font-size: var(--font-size-xl); color: var(--color-gray-900); margin: var(--spacing-3xl) 0 var(--spacing-xs); }
     .shop-blurb { color: var(--color-gray-600); margin-bottom: var(--spacing-lg); }
     .shop .services-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
@@ -91,20 +99,22 @@
       <h1>EPC Trade Shop</h1>
       <p class="shop-intro">Equipment supply for solar EPCs: Deye inverters, Adani panels, galvanised structures, ACDB boxes and ready packages. Dealer pricing on request: order on WhatsApp or add items to a quote.</p>
 
+      <div class="shop-layout">
       <nav class="shop-nav" aria-label="Shop categories">
         
-        <a class="btn btn-outline btn-sm" href="#kits">Rooftop Packages</a>
+        <a href="#kits">Rooftop Packages</a>
         
-        <a class="btn btn-outline btn-sm" href="#inverters">Deye Inverters</a>
+        <a href="#inverters">Deye Inverters</a>
         
-        <a class="btn btn-outline btn-sm" href="#panels">Adani Solar Panels</a>
+        <a href="#panels">Adani Solar Panels</a>
         
-        <a class="btn btn-outline btn-sm" href="#structures">Galvanised Structures</a>
+        <a href="#structures">Galvanised Structures</a>
         
-        <a class="btn btn-outline btn-sm" href="#acdb">ACDB Boxes</a>
+        <a href="#acdb">ACDB Boxes</a>
         
       </nav>
 
+      <div class="shop-main">
       
       <section id="kits">
         <h2>Rooftop Packages</h2>
@@ -119,7 +129,7 @@
               <li>Deye single-phase on-grid inverter</li><li>6 x Adani 545 Wp bifacial panels</li><li>GI rooftop structure</li><li>ACDB box</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+3+kW+Residential+Package" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+3+kW+Residential+Package" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="3 kW Residential Package">Add to quote</button>
             </div>
           </article>
@@ -132,7 +142,7 @@
               <li>Deye single-phase on-grid inverter</li><li>10 x Adani 545 Wp bifacial panels</li><li>GI rooftop structure</li><li>ACDB box</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+5+kW+Residential+Package" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+5+kW+Residential+Package" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="5 kW Residential Package">Add to quote</button>
             </div>
           </article>
@@ -153,7 +163,7 @@
               <li>Single phase</li><li>Wi-Fi monitoring</li><li>Zero-export ready</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+3+kW+Single-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+3+kW+Single-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 3 kW Single-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -166,7 +176,7 @@
               <li>Single phase</li><li>2 MPPT</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+5+kW+Single-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+5+kW+Single-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 5 kW Single-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -179,7 +189,7 @@
               <li>Single phase</li><li>Battery-ready</li><li>Backup output</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+5+kW+Single-Phase+Hybrid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+5+kW+Single-Phase+Hybrid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 5 kW Single-Phase Hybrid">Add to quote</button>
             </div>
           </article>
@@ -192,7 +202,7 @@
               <li>Three phase</li><li>2 MPPT</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+10+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+10+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 10 kW Three-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -205,7 +215,7 @@
               <li>Three phase</li><li>2 MPPT</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+15+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+15+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 15 kW Three-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -218,7 +228,7 @@
               <li>Three phase</li><li>2 MPPT</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+20+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+20+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 20 kW Three-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -231,7 +241,7 @@
               <li>Three phase</li><li>Commercial / MSME</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+30+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+30+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 30 kW Three-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -244,7 +254,7 @@
               <li>Three phase</li><li>Commercial / MSME</li><li>Wi-Fi monitoring</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+50+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Deye+50+kW+Three-Phase+On-Grid" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Deye 50 kW Three-Phase On-Grid">Add to quote</button>
             </div>
           </article>
@@ -265,7 +275,7 @@
               <li>Half-cut cells</li><li>Bifacial</li><li>182 mm cells</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+540+Wp+Mono+PERC+Bifacial" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+540+Wp+Mono+PERC+Bifacial" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Adani 540 Wp Mono PERC Bifacial">Add to quote</button>
             </div>
           </article>
@@ -278,7 +288,7 @@
               <li>Half-cut cells</li><li>Bifacial</li><li>182 mm cells</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+550+Wp+Mono+PERC+Bifacial" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+550+Wp+Mono+PERC+Bifacial" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Adani 550 Wp Mono PERC Bifacial">Add to quote</button>
             </div>
           </article>
@@ -291,7 +301,7 @@
               <li>N-type TOPCon</li><li>Dual glass</li><li>Bifacial</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+575+Wp+TOPCon+Bifacial" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+575+Wp+TOPCon+Bifacial" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Adani 575 Wp TOPCon Bifacial">Add to quote</button>
             </div>
           </article>
@@ -304,7 +314,7 @@
               <li>N-type TOPCon</li><li>Dual glass</li><li>Bifacial</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+590+Wp+TOPCon+Bifacial" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Adani+590+Wp+TOPCon+Bifacial" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Adani 590 Wp TOPCon Bifacial">Add to quote</button>
             </div>
           </article>
@@ -325,7 +335,7 @@
               <li>Hot-dip galvanised</li><li>Elevated rooftop design</li><li>Fasteners included</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Residential+Rooftop+Structure" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Residential+Rooftop+Structure" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Residential Rooftop Structure">Add to quote</button>
             </div>
           </article>
@@ -338,7 +348,7 @@
               <li>Hot-dip galvanised</li><li>Fixed tilt</li><li>Pile or foundation mount</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Utility-Scale+Ground-Mount+Structure" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Utility-Scale+Ground-Mount+Structure" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Utility-Scale Ground-Mount Structure">Add to quote</button>
             </div>
           </article>
@@ -359,7 +369,7 @@
               <li>MCB + AC SPD</li><li>UV-protected enclosure</li><li>1 in 1 out</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Single-Phase+ACDB" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Single-Phase+ACDB" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Single-Phase ACDB">Add to quote</button>
             </div>
           </article>
@@ -372,7 +382,7 @@
               <li>MCCB / MCB + AC SPD</li><li>IP-rated enclosure</li><li>1 in 1 out</li>
             </ul>
             <div class="shop-actions">
-              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Three-Phase+ACDB" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+              <a class="btn btn-primary btn-sm" href="https://wa.me/917598483355?text=Hi%2C+I+would+like+a+dealer+quote+for%3A+Three-Phase+ACDB" target="_blank" rel="noopener noreferrer">WhatsApp Order</a>
               <button type="button" class="btn btn-outline btn-sm" data-add-quote="Three-Phase ACDB">Add to quote</button>
             </div>
           </article>
@@ -422,6 +432,8 @@
           </div>
         </div>
       </section>
+      </div>
+      </div>
     </div>
   </main>
 
