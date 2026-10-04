@@ -19,7 +19,8 @@
     .shop-intro { color: var(--color-gray-700); max-width: 640px; margin-bottom: var(--spacing-xl); }
     .shop-layout { display: grid; grid-template-columns: 220px 1fr; gap: var(--spacing-2xl); align-items: start; }
     .shop-nav { position: sticky; top: calc(var(--header-height) + var(--spacing-lg)); display: flex; flex-direction: column; gap: var(--spacing-xs); }
-    .shop-nav a { padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-lg); font-weight: 600; color: var(--color-gray-700); }
+    .shop-nav a { display: flex; justify-content: space-between; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-sm) var(--spacing-md); border: 2px solid var(--color-primary); border-radius: var(--radius-lg); font-weight: 600; color: var(--color-primary); }
+    .shop-nav a::after { content: '\203A'; font-size: 1.25em; line-height: 1; }
     .shop-nav a:hover { background-color: var(--color-primary); color: var(--color-white); }
     .shop h2 { scroll-margin-top: calc(var(--header-height) + var(--spacing-lg)); }
     @media (max-width: 800px) {
@@ -104,11 +105,11 @@
         
         <a href="#kits">Rooftop Packages</a>
         
-        <a href="#inverters">Deye Inverters</a>
+        <a href="#inverters">Inverters</a>
         
-        <a href="#panels">Adani Solar Panels</a>
+        <a href="#panels">Solar Modules</a>
         
-        <a href="#structures">Galvanised Structures</a>
+        <a href="#structures">Structures</a>
         
         <a href="#acdb">ACDB Boxes</a>
         
@@ -151,7 +152,7 @@
       </section>
       
       <section id="inverters">
-        <h2>Deye Inverters</h2>
+        <h2>Inverters</h2>
         <p class="shop-blurb">On-grid string and hybrid inverters, 3 kW to 50 kW.</p>
         <div class="services-grid">
           
@@ -263,7 +264,7 @@
       </section>
       
       <section id="panels">
-        <h2>Adani Solar Panels</h2>
+        <h2>Solar Modules</h2>
         <p class="shop-blurb">Mono PERC and TOPCon modules from Adani Solar.</p>
         <div class="services-grid">
           
@@ -323,7 +324,7 @@
       </section>
       
       <section id="structures">
-        <h2>Galvanised Structures</h2>
+        <h2>Structures</h2>
         <p class="shop-blurb">Hot-dip galvanised mounting structures for rooftop and utility-scale.</p>
         <div class="services-grid">
           
