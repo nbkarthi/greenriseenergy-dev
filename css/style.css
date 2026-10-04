@@ -360,7 +360,7 @@ p {
 
 .logo-text span:first-child {
   font-family: var(--font-family-display);
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--color-primary);
@@ -1238,6 +1238,18 @@ p {
   font-size: var(--font-size-sm);
   color: var(--color-gray-500);
   margin: 0;
+}
+
+.footer-legal {
+  padding: var(--spacing-lg) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  text-align: center;
+}
+
+.footer-legal span + span::before {
+  content: "|";
+  margin: 0 var(--spacing-sm);
 }
 
 /* ==========================================
