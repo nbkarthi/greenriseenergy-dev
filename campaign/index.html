@@ -77,6 +77,13 @@
             width: 32px;
             height: 32px;
         }
+        .logo { height: 44px; width: auto; margin-bottom: 20px; background: #fff; padding: 8px 14px; border-radius: 12px; }
+        .perks { list-style: none; margin: 0 0 28px; padding: 0; position: relative; z-index: 1; }
+        .perks li { padding: 6px 0 6px 26px; position: relative; color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+        .perks li::before { content: '\2713'; position: absolute; left: 0; color: #F9A825; font-weight: 700; }
+        .contact-alt { margin-top: 24px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.7); position: relative; z-index: 1; }
+        .contact-alt a { display: inline-block; margin: 8px 6px 0; padding: 10px 18px; border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; color: #fff; text-decoration: none; font-weight: 500; }
+        .contact-alt a:hover { border-color: #F9A825; }
         .header h1 {
             font-size: 2.4rem;
             font-weight: 700;
@@ -213,9 +220,15 @@
     <div class="container">
         <div id="formContainer">
             <div class="header">
+                <img src="../images/logo.png" alt="Greenrise Energy Solutions" class="logo">
                 <h1>Go Solar Today</h1>
                 <p>Register for our exclusive campaign.</p>
             </div>
+            <ul class="perks">
+                <li>System designed around your roof and electricity bill</li>
+                <li>End-to-end installation by our own engineers</li>
+                <li>Help with net-metering and paperwork</li>
+            </ul>
             <form id="campaignForm" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
@@ -239,6 +252,10 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </button>
             </form>
+            <p class="contact-alt">Prefer to talk? Reach us directly<br>
+                <a href="tel:+917598483355">Call +91 75984 83355</a>
+                <a href="https://wa.me/917598483355?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20solar%20for%20my%20property." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </p>
         </div>
         
         <div class="success-message" id="successMessage">
