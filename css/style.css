@@ -1513,3 +1513,26 @@ p {
     color: #000;
   }
 }
+/* ==========================================
+   Floating WhatsApp button (homepage)
+   ========================================== */
+.whatsapp-float {
+  position: fixed;
+  right: var(--spacing-lg);
+  bottom: var(--spacing-lg);
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: #0F7B6C; /* WhatsApp-style teal, dark enough for white text contrast */
+  color: var(--color-white);
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-base);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+}
