@@ -23,6 +23,8 @@
     .shop-nav a::after { content: '\203A'; font-size: 1.25em; line-height: 1; }
     .shop-nav a:hover { background-color: var(--color-primary); color: var(--color-white); }
     .shop-main section:first-child h2 { margin-top: 0; }
+    .shop-nav .shop-nav-cta { margin-top: var(--spacing-md); background-color: var(--color-highlight); border-color: var(--color-highlight); color: var(--color-gray-900); }
+    .shop-nav .shop-nav-cta:hover { background-color: var(--color-highlight-dark); border-color: var(--color-highlight-dark); color: var(--color-gray-900); }
     .shop h2 { scroll-margin-top: calc(var(--header-height) + var(--spacing-lg)); }
     @media (max-width: 800px) {
       .shop-layout { grid-template-columns: 1fr; gap: 0; }
@@ -114,7 +116,7 @@
         
         <a href="#acdb">ACDB Boxes</a>
         
-        <a href="#quote">Request a Quote</a>
+        <a class="shop-nav-cta" href="#quote">Request a Quote</a>
       </nav>
 
       <div class="shop-main">
