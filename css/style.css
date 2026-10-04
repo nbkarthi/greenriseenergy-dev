@@ -347,9 +347,32 @@ p {
   color: var(--color-primary);
 }
 
-.logo-img {
+.logo-icon {
+  width: 48px;
   height: 48px;
-  width: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text span:first-child {
+  font-family: var(--font-family-display);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+}
+
+.logo-text span:last-child {
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 3px;
 }
 
 .nav {
