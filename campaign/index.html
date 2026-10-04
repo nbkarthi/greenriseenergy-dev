@@ -88,6 +88,8 @@
         .contact-alt { margin-top: 24px; text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.7); position: relative; z-index: 1; }
         .contact-alt a { display: inline-block; margin: 8px 6px 0; padding: 10px 18px; border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; color: #fff; text-decoration: none; font-weight: 500; }
         .contact-alt a:hover { border-color: #F9A825; }
+        .whatsapp-float { position: fixed; right: 24px; bottom: 24px; z-index: 900; display: inline-flex; align-items: center; gap: 8px; padding: 16px 24px; background: #0F7B6C; color: #fff; font-weight: 600; text-decoration: none; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); transition: transform 0.3s ease; }
+        .whatsapp-float:hover { transform: translateY(-2px); }
         .header h1 {
             font-size: 2.4rem;
             font-weight: 700;
@@ -259,9 +261,8 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </button>
             </form>
-            <p class="contact-alt">Prefer to talk? Reach us directly<br>
+            <p class="contact-alt">Prefer to talk? Call us directly<br>
                 <a href="tel:+917598483355">Call +91 75984 83355</a>
-                <a href="https://wa.me/917598483355?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20solar%20for%20my%20property." target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </p>
         </div>
         
@@ -279,6 +280,11 @@
             <a href="/privacy/" style="color: inherit;">Privacy Policy</a>
         </p>
     </div>
+
+    <a class="whatsapp-float" href="https://wa.me/917598483355?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20solar%20for%20my%20property." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        <span>WhatsApp</span>
+    </a>
 
     <script>
         const API_URL = 'https://app.greenriseenergy.com/api/leads';
