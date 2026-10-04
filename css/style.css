@@ -874,9 +874,9 @@ p {
   pointer-events: none;
 }
 
-.capabilities::before { background-image: url("../photos/msme2.jpeg"); }
-.about::before { background-image: url("../photos/msme3.jpeg"); }
-.contact::before { background-image: url("../photos/residential.jpeg"); }
+.capabilities::before { background-image: url("../images/msme2.jpeg"); }
+.about::before { background-image: url("../images/msme3.jpeg"); }
+.contact::before { background-image: url("../images/residential.jpeg"); }
 
 .capabilities > .container,
 .about > .container,
